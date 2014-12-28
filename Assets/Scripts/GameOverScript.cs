@@ -13,6 +13,11 @@ public class GameOverScript : MonoBehaviour
 	{
 	    ScoreValueLabel.text = GameStateManager.Score.ToString();
 	}
+
+    public void LoadGame() {
+        GameStateManager.Reset();
+        Application.LoadLevel("MainScene");
+    }
 	
 	// Update is called once per frame
 	void Update () {
